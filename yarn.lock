@@ -3193,7 +3193,7 @@ load-json-file@^2.0.0:
     pify "^2.0.0"
     strip-bom "^3.0.0"
 
-lob@^6.0.6:
+lob@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/lob/-/lob-6.1.0.tgz#3b13e646773f026a7e1d8a8a5d43d501084065f4"
   integrity sha512-Ji+0O8FRr1ZkikLIjWPeNSJTpM0ZoZIVSR6ga6y9aFbUY2hk+CorcJk6SEG6hrmzx2OJ0VrCb/BPLZ85ebr0AQ==
@@ -3321,7 +3321,7 @@ macos-release@^2.2.0:
   resolved "https://registry.yarnpkg.com/macos-release/-/macos-release-2.3.0.tgz#eb1930b036c0800adebccd5f17bc4c12de8bb71f"
   integrity sha512-OHhSbtcviqMPt7yfw5ef5aghS2jzFVKEFyCJndQt2YpSQ9qRVSEv2axSJI1paVThEu+FFGs584h/1YhxjVqajA==
 
-mailchecker@^3.3.4:
+mailchecker@^3.3.9:
   version "3.3.9"
   resolved "https://registry.yarnpkg.com/mailchecker/-/mailchecker-3.3.9.tgz#23c892b1fe5c41a14136d059f18d40b2ec13ff79"
   integrity sha512-Dk/33S9j6hvAdMasDjmSztzoPL0D052CXZx+ijXZMgLlH0l5L44fofllPDfCZEE1oEUe9U+ysvnjLpfeM6/jjA==

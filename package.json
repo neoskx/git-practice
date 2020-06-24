@@ -1,6 +1,6 @@
 {
   "name": "git-practice",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "A boilerplate for Node.js web applications, but this repo is only for me to practice git skill",
   "repository": {
     "type": "git",
@@ -43,10 +43,10 @@
     "instagram-node": "^0.5.8",
     "jquery": "^3.5.1",
     "lastfm": "^0.9.3",
-    "lob": "^6.0.6",
+    "lob": "^6.1.0",
     "lodash": "^4.17.15",
     "lusca": "^1.6.1",
-    "mailchecker": "^3.3.4",
+    "mailchecker": "^3.3.9",
     "moment": "^2.24.0",
     "mongoose": "^5.9.2",
     "morgan": "^1.9.1",
