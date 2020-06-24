@@ -1,9 +1,5 @@
 # Changelog
 --------
-
-#### 0.2.6 (June 24, 2020)
-- seems when create PR use squash will cause issue
-
 #### 0.2.5 (June 24, 2020)
 - update depenencies to latest
 
