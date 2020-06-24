@@ -9,11 +9,8 @@ env:
 
 jobs:
   build:
-    # only trigger when it is `release/bitspider` branch
-    # if: github.ref == 'refs/heads/release/bitspider'
     runs-on: ${{ matrix.os }}
 
-    # Platforms to build on/for
     strategy:
       matrix:
         os: [ubuntu-latest]
