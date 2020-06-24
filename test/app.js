@@ -104,3 +104,4 @@ describe('GET /random-url', () => {
       .expect(404, done);
   });
 });
+// for test git squash
