@@ -7,3 +7,5 @@ exports.index = (req, res) => {
     title: 'Home'
   });
 };
+
+// for test git squash
