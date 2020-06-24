@@ -1,15 +1,15 @@
 {
   "name": "git-practice",
   "version": "0.1.0",
-  "description": "A boilerplate for Node.js web applications",
+  "description": "A boilerplate for Node.js web applications, but this repo is only for me to practice git skill",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sahat/hackathon-starter.git"
+    "url": "https://github.com/neoskx/git-practice"
   },
   "license": "MIT",
-  "author": "Sahat Yalkabov",
+  "author": "Neo",
   "contributors": [
-    "Yashar Fakhari (https://github.com/YasharF)"
+    "Neo (https://github.com/neoskx)"
   ],
   "scripts": {
     "postinstall": "npm rebuild node-sass",
