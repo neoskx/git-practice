@@ -1,5 +1,6 @@
 const validator = require('validator');
 const nodemailer = require('nodemailer');
+// for test git squash
 
 /**
  * GET /contact

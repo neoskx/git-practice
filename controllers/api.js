@@ -16,6 +16,8 @@ const { google } = require('googleapis');
 const Quickbooks = require('node-quickbooks');
 const validator = require('validator');
 
+// for test git squash
+
 Quickbooks.setOauthVersion('2.0');
 
 /**
