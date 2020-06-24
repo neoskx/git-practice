@@ -1,6 +1,6 @@
 {
   "name": "git-practice",
-  "version": "0.2.6",
+  "version": "0.2.5",
   "description": "A boilerplate for Node.js web applications, but this repo is only for me to practice git skill",
   "repository": {
     "type": "git",
