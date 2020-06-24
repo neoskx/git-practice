@@ -1,0 +1,72 @@
+name: Build/Release
+
+on:
+  release:
+    types:
+      - published
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+
+jobs:
+  build:
+    # only trigger when it is `release/bitspider` branch
+    # if: github.ref == 'refs/heads/release/bitspider'
+    runs-on: ${{ matrix.os }}
+
+    # Platforms to build on/for
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2.1.0
+        with:
+          submodules: true
+      - name: Setup Node.js
+        uses: actions/setup-node@v1.4.2
+        with:
+          node-version: "12.x"
+          registry-url: https://registry.npmjs.org/
+      - name: Install node_modules
+        run: ls && yarn install
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm run test
+      
+  createPR:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2.1.0
+        with:
+          submodules: true
+      - name: Get release version
+        run: |
+          VERSION=${GITHUB_REF##*/v}
+          echo "::set-env name=VERSION::${GITHUB_REF##*/v}"
+      - name: Create Pull Request to `master`
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "release/v${{env.VERSION}}"        # If blank, default: triggered branch
+          destination_branch: "master"                      # If blank, default: master
+          pr_title: "Merge to master - ${{env.VERSION}}"              # Title of pull request
+          pr_body: ":crown: successfully publish ${{env.VERSION}}. Pulling release/v${{env.VERSION}} into master"                                      # Full markdown support, requires pr_title to be set
+          pr_reviewer: "neoskx"                         # Comma-separated list (no spaces)
+          pr_assignee: "neoskx"                         # Comma-separated list (no spaces)
+          pr_label: "release"                               # Comma-separated list (no spaces)
+          # pr_draft: true                                    # Creates pull request as draft
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Pull Request to `develop`
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "release/v${{env.VERSION}}"        # If blank, default: triggered branch
+          destination_branch: "develop"                      # If blank, default: master
+          pr_title: "Merge to develop - ${{env.VERSION}}"              # Title of pull request
+          pr_body: ":crown: successfully publish ${{env.VERSION}}. Pulling release/v${{env.VERSION}} into develop"                                      # Full markdown support, requires pr_title to be set
+          pr_reviewer: "neoskx"                         # Comma-separated list (no spaces)
+          pr_assignee: "neoskx"                         # Comma-separated list (no spaces)
+          pr_label: "release"                               # Comma-separated list (no spaces)
+          # pr_draft: true                                    # Creates pull request as draft
+          github_token: ${{ secrets.GITHUB_TOKEN }}
