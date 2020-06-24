@@ -35,7 +35,7 @@ jobs:
         run: npm run test
       
   createPR:
-    needs: release
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
