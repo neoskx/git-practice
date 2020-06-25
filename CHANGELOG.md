@@ -1,8 +1,7 @@
 # Changelog
 --------
-
 #### 0.2.6 (June 24, 2020)
-- seems when create PR use squash will cause issue
+- After research and practice, I finally know if you don't want to have conflict after merge, in github, use `all merge` is a good choice
 
 #### 0.2.5 (June 24, 2020)
 - update depenencies to latest
